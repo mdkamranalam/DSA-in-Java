@@ -1,0 +1,32 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Build directories
+out/
+target/
+build/
+
+# Maven
+.mvn/
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
