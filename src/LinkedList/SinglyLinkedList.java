@@ -48,4 +48,17 @@ public class SinglyLinkedList {
     public void getLength() {
         System.out.println("Length: " + length);
     }
+
+    // Insert at End
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        length++;
+    }
 }
