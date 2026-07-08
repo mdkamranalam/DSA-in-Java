@@ -15,6 +15,7 @@ public class Main {
         sll.set(1, 50);
         sll.insert(1, 200);
         sll.remove(2);
+        sll.reverse();
         sll.getHead();
         sll.getTail();
         sll.getLength();
