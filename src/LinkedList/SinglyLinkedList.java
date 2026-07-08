@@ -28,10 +28,12 @@ public class SinglyLinkedList {
     // Print the Linked List
     public void printList() {
         Node temp = head;
+        System.out.print("HEAD -> ");
         while (temp != null) {
-            System.out.println(temp.value);
+            System.out.print(temp.value + " -> ");
             temp = temp.next;
         }
+        System.out.println("NULL");
     }
 
     // Get the value of head
