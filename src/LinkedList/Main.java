@@ -21,6 +21,7 @@ public class Main {
 //        sll.getTail();
 //        sll.getLength();
         sll.printList();
-        System.out.println(sll.findMiddleNode().value);
+//        System.out.println(sll.findMiddleNode().value); // Middle Node
+        System.out.println(sll.hasLoop());
     }
 }
