@@ -177,4 +177,19 @@ public class SinglyLinkedList {
             temp = after;
         }
     }
+
+    /*
+    * ========== EXERCISES ==========
+    * */
+    // Ex 1: Find Middle Node
+    public Node findMiddleNode() {
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+    }
 }
