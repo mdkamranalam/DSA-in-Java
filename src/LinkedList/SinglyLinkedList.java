@@ -268,4 +268,16 @@ public class SinglyLinkedList {
             current = current.next;
         }
     }
+
+    // Ex 5: Binary to Decimal
+    public int binaryToDecimal() {
+        Node current = head;
+        int num = 0;
+
+        while (current != null) {
+            num = num * 2 + current.value;
+            current = current.next;
+        }
+        return num;
+    }
 }

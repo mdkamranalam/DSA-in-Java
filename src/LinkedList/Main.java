@@ -6,12 +6,14 @@ public class Main {
         System.out.println("*** Singly Linked List ***");
         SinglyLinkedList sll = new SinglyLinkedList(1);
 //        sll.prepend(100);
-        sll.append(2);
+//        sll.append(2);
+//        sll.append(1);
+//        sll.append(3);
+//        sll.append(4);
+//        sll.append(2);
+//        sll.append(5);
+        sll.append(0);
         sll.append(1);
-        sll.append(3);
-        sll.append(4);
-        sll.append(2);
-        sll.append(5);
 //        System.out.println(sll.removeFirst().value);
 //        System.out.println(sll.removeLast().value);
 //        System.out.println(sll.get(1).value);
@@ -22,11 +24,12 @@ public class Main {
 //        sll.getHead();
 //        sll.getTail();
 //        sll.getLength();
-        sll.printList();
+//        sll.printList();
 //        System.out.println(sll.findMiddleNode().value); // Middle Node
 //        System.out.println(sll.hasLoop()); // Has Loop
 //        System.out.println(sll.findKthFromEnd(1).value); // Kth Node From End
-        sll.removeDuplicates(); // Remove Duplicates
+//        sll.removeDuplicates(); // Remove Duplicates
         sll.printList();
+        System.out.println(sll.binaryToDecimal()); // Binary to Decimal eg. 101 ----> 5
     }
 }
