@@ -1,5 +1,8 @@
 package LinkedList;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class SinglyLinkedList {
     private Node head;
     private Node tail;
@@ -228,5 +231,41 @@ public class SinglyLinkedList {
         }
 
         return slow;
+    }
+
+    // Ex 4: Remove Duplicates
+//    public void removeDuplicates() { // Without using Set
+//        Node current = head;
+//
+//        while (current != null) {
+//            Node runner = current;
+//
+//            while (runner.next != null) {
+//                if (runner.next.value == current.value) {
+//                    runner.next = runner.next.next;
+//                    length--;
+//                } else {
+//                    runner = runner.next;
+//                }
+//            }
+//            current = current.next;
+//        }
+//    }
+
+    public void removeDuplicates() { // Using Set
+        Set<Integer> values = new HashSet<>();
+        Node previous = null;
+        Node current = head;
+
+        while (current != null) {
+            if (values.contains(current.value)) {
+                previous.next = current.next;
+                length--;
+            } else {
+                values.add(current.value);
+                previous = current;
+            }
+            current = current.next;
+        }
     }
 }

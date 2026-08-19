@@ -7,8 +7,10 @@ public class Main {
         SinglyLinkedList sll = new SinglyLinkedList(1);
 //        sll.prepend(100);
         sll.append(2);
+        sll.append(1);
         sll.append(3);
         sll.append(4);
+        sll.append(2);
         sll.append(5);
 //        System.out.println(sll.removeFirst().value);
 //        System.out.println(sll.removeLast().value);
@@ -23,6 +25,8 @@ public class Main {
         sll.printList();
 //        System.out.println(sll.findMiddleNode().value); // Middle Node
 //        System.out.println(sll.hasLoop()); // Has Loop
-        System.out.println(sll.findKthFromEnd(1).value); // Kth Node From End
+//        System.out.println(sll.findKthFromEnd(1).value); // Kth Node From End
+        sll.removeDuplicates(); // Remove Duplicates
+        sll.printList();
     }
 }
