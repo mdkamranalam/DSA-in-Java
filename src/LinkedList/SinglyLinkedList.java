@@ -330,4 +330,25 @@ public class SinglyLinkedList {
 
         head = dummy.next;
     }
+
+    // Ex 8: Swap Nodes in Pairs
+    public void swapPairs() {
+        Node dummy = new Node(0);
+        dummy.next = head;
+        Node prev = dummy;
+        Node first = prev.next;
+
+        while (first != null && first.next != null) {
+            Node second = first.next;
+
+            prev.next = second;
+            first.next = second.next;
+            second.next = first;
+
+            prev = first;
+            first = first.next;
+        }
+
+        head = dummy.next;
+    }
 }

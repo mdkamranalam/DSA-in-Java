@@ -32,7 +32,8 @@ public class Main {
         sll.printList();
 //        System.out.println(sll.binaryToDecimal()); // Binary to Decimal eg. 101 ----> 5
 //        sll.partitionList(5); // Partition List eg. x = 5
-        sll.reverseBetween(1, 3); // Reverse Between eg. startIndex: 1, endIndex: 3
+//        sll.reverseBetween(1, 3); // Reverse Between eg. startIndex: 1, endIndex: 3
+        sll.swapPairs(); // Swap Nodes in Pairs
         sll.printList();
     }
 }
