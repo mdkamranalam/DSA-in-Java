@@ -4,14 +4,14 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("***========== Linked List ==========***");
         System.out.println("*** Singly Linked List ***");
-        SinglyLinkedList sll = new SinglyLinkedList(1);
+        SinglyLinkedList sll = new SinglyLinkedList(3);
 //        sll.prepend(100);
-//        sll.append(2);
-//        sll.append(1);
-//        sll.append(3);
-//        sll.append(4);
-//        sll.append(2);
-//        sll.append(5);
+        sll.append(8);
+        sll.append(5);
+        sll.append(10);
+        sll.append(4);
+        sll.append(2);
+        sll.append(50);
         sll.append(0);
         sll.append(1);
 //        System.out.println(sll.removeFirst().value);
@@ -30,6 +30,8 @@ public class Main {
 //        System.out.println(sll.findKthFromEnd(1).value); // Kth Node From End
 //        sll.removeDuplicates(); // Remove Duplicates
         sll.printList();
-        System.out.println(sll.binaryToDecimal()); // Binary to Decimal eg. 101 ----> 5
+//        System.out.println(sll.binaryToDecimal()); // Binary to Decimal eg. 101 ----> 5
+        sll.partitionList(5); // Partition List eg. x = 5
+        sll.printList();
     }
 }
