@@ -306,4 +306,28 @@ public class SinglyLinkedList {
         prev1.next = dummy2.next;
         head = dummy1.next;
     }
+
+    // Ex 7: Reverse Between
+    public void reverseBetween(int startIndex, int endIndex) {
+        if (head == null) return;
+
+        Node dummy = new Node(0);
+        dummy.next = head;
+        Node prev = dummy;
+
+        for (int i = 0; i < startIndex; i++) {
+            prev = prev.next;
+        }
+
+        Node current = prev.next;
+
+        for (int i = 0; i < endIndex - startIndex; i++) {
+            Node nodeToMove = current.next;
+            current.next = nodeToMove.next;
+            nodeToMove.next = prev.next;
+            prev.next = nodeToMove;
+        }
+
+        head = dummy.next;
+    }
 }
