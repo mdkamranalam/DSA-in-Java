@@ -11,7 +11,7 @@ public class DoublyLinkedList {
         Node next;
         Node prev;
 
-        // Node Constructore
+        // Node Constructor
         Node(int value) {
             this.value = value;
         }
