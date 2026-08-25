@@ -37,7 +37,13 @@ public class Main {
 //        sll.printList();
 
         System.out.println("*** Doubly Linked List ***");
-        DoublyLinkedList dll = new DoublyLinkedList(7);
+        DoublyLinkedList dll = new DoublyLinkedList(1);
+
+        dll.append(2);
+        dll.append(3);
+        dll.insert(2, 30);
+        dll.prepend(100);
+
         dll.printList();
         dll.getHead();
         dll.getTail();
