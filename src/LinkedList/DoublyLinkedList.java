@@ -133,11 +133,50 @@ public class DoublyLinkedList {
     }
 
     // Delete from the Beginning
-//    public Node removeFirst() {}
+    public Node removeFirst() {
+        if (length == 0) return null;
+        Node temp = head;
+        if (length == 1) {
+            head = null;
+            tail = null;
+        } else {
+            head = head.next;
+            head.prev = null;
+            temp.next = null;
+        }
+        length--;
+        return temp;
+    }
 
     // Remove a Node at a particular Index
-//    public boolean remove(int index) {}
+    public Node remove(int index) {
+        if (index < 0 || index >= length) return null;
+        if (index == 0) return removeFirst();
+        if (index == length - 1) return removeLast();
+
+        Node temp = get(index);
+        temp.next.prev = temp.prev;
+        temp.prev.next = temp.next;
+        temp.next = null;
+        temp.prev = null;
+        length--;
+
+        return temp;
+    }
 
     // Delete from End
-//    public Node removeLast() {}
+    public Node removeLast() {
+        if (length == 0) return null;
+        Node temp = tail;
+        if (length == 1) {
+            head = null;
+            tail = null;
+        } else {
+            tail = tail.prev;
+            tail.next = null;
+            temp.prev = null;
+        }
+        length--;
+        return temp;
+    }
 }
