@@ -67,7 +67,7 @@ public class SinglyLinkedList {
     // Change value at given Index
     public boolean set(int index, int value) {
         Node temp = get(index);
-        while (temp != null) {
+        if (temp != null) {
             temp.value = value;
             return true;
         }
@@ -89,7 +89,7 @@ public class SinglyLinkedList {
 
     // Insert at given index or position
     public boolean insert(int index, int value) {
-        if (index < 0 || index >= length) return false;
+        if (index < 0 || index > length) return false;
         if (index == 0) {
             prepend(value);
             return true;
@@ -283,7 +283,7 @@ public class SinglyLinkedList {
 
     // Ex 6: Partition List
     public void partitionList(int x) {
-        if (head == null) return;;
+        if (head == null) return;
 
         Node dummy1 = new Node(0);
         Node dummy2 = new Node(0);
