@@ -179,4 +179,24 @@ public class DoublyLinkedList {
         length--;
         return temp;
     }
+
+    /*
+     * ========== EXERCISES ==========
+     * */
+    // Ex 1: Palindrome Checker
+    public boolean isPalindrome() {
+        if (length <= 1) return true;
+
+        Node forwardNode = head;
+        Node backwardNode = tail;
+
+        for (int i = 0; i < length/2; i++) {
+            if (forwardNode.value != backwardNode.value) {
+                return false;
+            }
+            forwardNode = forwardNode.next;
+            backwardNode = backwardNode.prev;
+        }
+        return true;
+    }
 }

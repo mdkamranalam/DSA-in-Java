@@ -41,17 +41,18 @@ public class Main {
 
         dll.append(2);
         dll.append(3);
-        dll.append(4);
-        dll.append(5);
-        dll.append(50);
-        dll.insert(2, 30);
-        dll.prepend(100);
+        dll.append(2);
+        dll.append(1);
+//        dll.append(50);
+//        dll.insert(2, 30);
+//        dll.prepend(100);
 
-        dll.removeFirst();
-        dll.remove(2);
-        dll.removeLast();
+//        dll.removeFirst();
+//        dll.remove(2);
+//        dll.removeLast();
 
         dll.printList();
+        System.out.println("Palindrome Check: " + dll.isPalindrome()); // Check Palindrome
         dll.getHead();
         dll.getTail();
         dll.getLength();
