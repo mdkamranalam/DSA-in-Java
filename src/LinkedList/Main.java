@@ -39,11 +39,11 @@ public class Main {
         System.out.println("*** Doubly Linked List ***");
         DoublyLinkedList dll = new DoublyLinkedList(1);
 
-        dll.append(2);
+        dll.append(20);
         dll.append(3);
         dll.append(4);
         dll.append(5);
-//        dll.append(50);
+        dll.append(50);
 //        dll.insert(2, 30);
 //        dll.prepend(100);
 
@@ -54,7 +54,8 @@ public class Main {
         dll.printList();
 //        System.out.println("Palindrome Check: " + dll.isPalindrome()); // Check Palindrome
 
-        dll.reverse(); // Reverse Doubly Linked List
+//        dll.reverse(); // Reverse Doubly Linked List
+        dll.partitionList(5); // Partition List
         dll.printList();
 
         dll.getHead();
