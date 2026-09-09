@@ -199,4 +199,21 @@ public class DoublyLinkedList {
         }
         return true;
     }
+
+    // Ex 2: Reverse
+    public void reverse() {
+        Node curr = head;
+        Node temp = null;
+
+        while (curr != null) {
+            temp = curr.prev;
+            curr.prev = curr.next;
+            curr.next = temp;
+            curr = curr.prev;
+        }
+
+        temp = head;
+        head = tail;
+        tail = temp;
+    }
 }
