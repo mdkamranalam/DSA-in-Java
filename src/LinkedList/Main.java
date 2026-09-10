@@ -55,7 +55,8 @@ public class Main {
 //        System.out.println("Palindrome Check: " + dll.isPalindrome()); // Check Palindrome
 
 //        dll.reverse(); // Reverse Doubly Linked List
-        dll.partitionList(5); // Partition List
+//        dll.partitionList(5); // Partition List
+        dll.reverseBetween(1, 3); // Reverse Between
         dll.printList();
 
         dll.getHead();
