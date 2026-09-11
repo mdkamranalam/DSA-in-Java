@@ -56,7 +56,8 @@ public class Main {
 
 //        dll.reverse(); // Reverse Doubly Linked List
 //        dll.partitionList(5); // Partition List
-        dll.reverseBetween(1, 3); // Reverse Between
+//        dll.reverseBetween(1, 3); // Reverse Between
+        dll.swapNodePairs();
         dll.printList();
 
         dll.getHead();
