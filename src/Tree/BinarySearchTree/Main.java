@@ -14,6 +14,9 @@ public class Main {
 
         myBST.insert(27); // root -> left -> right
 
+        System.out.println(myBST.contains(27));
+        System.out.println(myBST.contains(17));
+
         System.out.println("Root = " + myBST.root.value);
         System.out.println("Value = " + myBST.root.left.right.value);
         System.out.println("***==============================================***");
