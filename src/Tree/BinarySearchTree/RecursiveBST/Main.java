@@ -47,6 +47,14 @@ class RecursiveBST {
     public boolean rContains(int value) {
         return rContains(root, value);
     }
+
+    // Minimum value
+    public int minValue(Node root) {
+       while (root.left != null) {
+           root = root.left;
+       }
+       return root.value;
+    }
 }
 
 public class Main {
@@ -65,6 +73,9 @@ public class Main {
         System.out.println("Root: " + myBST.root.value);
         System.out.println("Root->Left: " + myBST.root.left.value);
         System.out.println("Root->Right: " + myBST.root.right.value);
+
+        System.out.println("Minimum Value: " + myBST.minValue(myBST.root));
+        System.out.println("Minimum Value at Right of the Root: " + myBST.minValue(myBST.root.right));
 
         System.out.println(myBST.rContains(27));
         System.out.println(myBST.rContains(17));
