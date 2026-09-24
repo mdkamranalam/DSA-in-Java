@@ -48,6 +48,34 @@ class RecursiveBST {
         return rContains(root, value);
     }
 
+    // Delete
+    private Node deleteNode(Node root, int value) {
+        if (root == null) return null;
+
+        if (value < root.value) {
+            root.left = deleteNode(root.left, value);
+        } else if (value > root.value) {
+            root.right = deleteNode(root.right, value);
+        } else {
+            if (root.left == null && root.right == null) {
+                return null;
+            } else if (root.left == null) {
+                root = root.right;
+            } else if (root.right == null) {
+                root = root.left;
+            } else {
+                int subTreeMin = minValue(root.right);
+                root.value = subTreeMin;
+                root.right = deleteNode(root.right, subTreeMin);
+            }
+        }
+        return root;
+    }
+
+    public void deleteNode(int value) {
+        deleteNode(root, value);
+    }
+
     // Minimum value
     public int minValue(Node root) {
        while (root.left != null) {
@@ -72,10 +100,13 @@ public class Main {
 
         System.out.println("Root: " + myBST.root.value);
         System.out.println("Root->Left: " + myBST.root.left.value);
+
         System.out.println("Root->Right: " + myBST.root.right.value);
 
         System.out.println("Minimum Value: " + myBST.minValue(myBST.root));
         System.out.println("Minimum Value at Right of the Root: " + myBST.minValue(myBST.root.right));
+
+        myBST.deleteNode(27);
 
         System.out.println(myBST.rContains(27));
         System.out.println(myBST.rContains(17));
