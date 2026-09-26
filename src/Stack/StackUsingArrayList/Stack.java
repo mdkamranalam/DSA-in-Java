@@ -3,7 +3,7 @@ package Stack.StackUsingArrayList;
 import java.util.ArrayList;
 
 public class Stack<T> {
-    private ArrayList<T> stackList = new ArrayList<>();
+    private final ArrayList<T> stackList = new ArrayList<>();
 
     public ArrayList<T> getStackList() {
         return stackList;

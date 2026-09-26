@@ -8,18 +8,6 @@ public class SinglyLinkedList {
     private Node tail;
     private int length;
 
-    // Node class
-    class Node {
-        int value;
-        Node next;
-
-        // Node Constructor
-        Node(int value) {
-            this.value = value;
-            this.next = null;
-        }
-    }
-
     // Constructor Singly Linked List
     public SinglyLinkedList(int value) {
         Node newNode = new Node(value);
@@ -182,8 +170,8 @@ public class SinglyLinkedList {
     }
 
     /*
-    * ========== EXERCISES ==========
-    * */
+     * ========== EXERCISES ==========
+     * */
     // Ex 1: Find Middle Node
     public Node findMiddleNode() {
         Node slow = head;
@@ -233,6 +221,23 @@ public class SinglyLinkedList {
         return slow;
     }
 
+    public void removeDuplicates() { // Using Set
+        Set<Integer> values = new HashSet<>();
+        Node previous = null;
+        Node current = head;
+
+        while (current != null) {
+            if (values.contains(current.value)) {
+                previous.next = current.next;
+                length--;
+            } else {
+                values.add(current.value);
+                previous = current;
+            }
+            current = current.next;
+        }
+    }
+
     // Ex 4: Remove Duplicates
 //    public void removeDuplicates() { // Without using Set
 //        Node current = head;
@@ -251,23 +256,6 @@ public class SinglyLinkedList {
 //            current = current.next;
 //        }
 //    }
-
-    public void removeDuplicates() { // Using Set
-        Set<Integer> values = new HashSet<>();
-        Node previous = null;
-        Node current = head;
-
-        while (current != null) {
-            if (values.contains(current.value)) {
-                previous.next = current.next;
-                length--;
-            } else {
-                values.add(current.value);
-                previous = current;
-            }
-            current = current.next;
-        }
-    }
 
     // Ex 5: Binary to Decimal
     public int binaryToDecimal() {
@@ -350,5 +338,17 @@ public class SinglyLinkedList {
         }
 
         head = dummy.next;
+    }
+
+    // Node class
+    class Node {
+        int value;
+        Node next;
+
+        // Node Constructor
+        Node(int value) {
+            this.value = value;
+            this.next = null;
+        }
     }
 }

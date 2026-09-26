@@ -1,6 +1,8 @@
 # Matrix / Grid in Java
 
-> A complete study and revision reference covering matrix fundamentals, Java implementation, traversal patterns, searching, sorting, transpose, diagonals, rotation, spiral traversal, common algorithms, LeetCode problems, pseudocode, complexity analysis, and interview questions.
+> A complete study and revision reference covering matrix fundamentals, Java implementation, traversal patterns,
+> searching, sorting, transpose, diagonals, rotation, spiral traversal, common algorithms, LeetCode problems, pseudocode,
+> complexity analysis, and interview questions.
 
 ---
 
@@ -59,7 +61,7 @@ Total elements = R × C
 Important terms:
 
 | Term               | Meaning                            |
-| ------------------ | ---------------------------------- |
+|--------------------|------------------------------------|
 | Row                | Horizontal collection of elements  |
 | Column             | Vertical collection of elements    |
 | Cell               | Individual element                 |
@@ -2210,7 +2212,7 @@ A useful decision process:
 # 50. Common Matrix Time Complexities
 
 | Operation                      | Complexity     |
-| ------------------------------ | -------------- |
+|--------------------------------|----------------|
 | Access element                 | O(1)           |
 | Traverse matrix                | O(R × C)       |
 | Search unsorted matrix         | O(R × C)       |
@@ -4584,4 +4586,5 @@ int[] dr = {-1, 1, 0, 0};
 int[] dc = {0, 0, -1, 1};
 ```
 
-Once these patterns become intuitive, a large percentage of basic and intermediate matrix/grid problems reduce to choosing the correct traversal or transformation around them.
+Once these patterns become intuitive, a large percentage of basic and intermediate matrix/grid problems reduce to
+choosing the correct traversal or transformation around them.

@@ -33,10 +33,10 @@ public class Main {
     }
 
     /*
-    *   Print Matrix
-    *       Time Complexity: O(row x col)
-    *       Space Complexity: O(1)
-    * */
+     *   Print Matrix
+     *       Time Complexity: O(row x col)
+     *       Space Complexity: O(1)
+     * */
     private static void printMatrix(int[][] arr) {
         int row = arr.length;
         int col = arr[0].length;

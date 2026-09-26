@@ -182,7 +182,7 @@ public void printList() {
 We start from `head` and repeatedly follow:
 
 ```java
-temp = temp.next;
+temp =temp.next;
 ```
 
 Example:
@@ -420,8 +420,8 @@ HEAD
 ### Important pattern
 
 ```java
-newNode.next = head;
-head = newNode;
+newNode.next =head;
+head =newNode;
 ```
 
 ### Complexity
@@ -486,8 +486,8 @@ HEAD                    TAIL
 ### Important pattern
 
 ```java
-tail.next = newNode;
-tail = newNode;
+tail.next =newNode;
+tail =newNode;
 ```
 
 ### Complexity
@@ -528,8 +528,9 @@ invalid.
 Therefore this condition:
 
 ```java
-if (index == length) {
-    append(value);
+if(index ==length){
+
+append(value);
 }
 ```
 
@@ -603,8 +604,8 @@ temp = [20]
 Then:
 
 ```java
-newNode.next = temp.next;
-temp.next = newNode;
+newNode.next =temp.next;
+temp.next =newNode;
 ```
 
 Visual:
@@ -689,7 +690,7 @@ Node temp = head;
 Move head:
 
 ```java
-head = head.next;
+head =head.next;
 ```
 
 Now:
@@ -703,7 +704,7 @@ HEAD
 Disconnect removed node:
 
 ```java
-temp.next = null;
+temp.next =null;
 ```
 
 Final:
@@ -791,8 +792,8 @@ temp = [40]
 Then:
 
 ```java
-tail = pre;
-tail.next = null;
+tail =pre;
+tail.next =null;
 ```
 
 Result:
@@ -851,11 +852,15 @@ if (index < 0 || index >= length) return null;
 Then handle special cases:
 
 ```java
-if (index == 0)
-    return removeFirst();
+if(index ==0)
+        return
 
-if (index == length - 1)
-    return removeLast();
+removeFirst();
+
+if(index ==length -1)
+        return
+
+removeLast();
 ```
 
 For a middle node:
@@ -876,8 +881,8 @@ Code:
 Node prev = get(index - 1);
 Node temp = prev.next;
 
-prev.next = temp.next;
-temp.next = null;
+prev.next =temp.next;
+temp.next =null;
 ```
 
 Example:
@@ -953,10 +958,10 @@ HEAD
 The most important part is:
 
 ```java
-after = temp.next;
-temp.next = before;
-before = temp;
-temp = after;
+after =temp.next;
+temp.next =before;
+before =temp;
+temp =after;
 ```
 
 Think of the pointers as:
@@ -978,7 +983,7 @@ We want to reverse:
 Save the next node:
 
 ```java
-after = temp.next;
+after =temp.next;
 ```
 
 ```text
@@ -992,7 +997,7 @@ NULL      [20]  →    [30]
 Reverse current pointer:
 
 ```java
-temp.next = before;
+temp.next =before;
 ```
 
 ```text
@@ -1370,7 +1375,7 @@ previous   current
 When duplicate is found:
 
 ```java
-previous.next = current.next;
+previous.next =current.next;
 ```
 
 This skips the duplicate:
@@ -1426,7 +1431,7 @@ Space: O(1)
 Comparison:
 
 | Method  |  Time | Space |
-| ------- | ----: | ----: |
+|---------|------:|------:|
 | HashSet |  O(n) |  O(n) |
 | Runner  | O(n²) |  O(1) |
 
@@ -1604,9 +1609,9 @@ current.value >= x
 At the end:
 
 ```java
-prev2.next = null;
-prev1.next = dummy2.next;
-head = dummy1.next;
+prev2.next =null;
+prev1.next =dummy2.next;
+head =dummy1.next;
 ```
 
 Conceptually:
@@ -1638,8 +1643,8 @@ Instead of asking:
 you can always do:
 
 ```java
-prev1.next = current;
-prev1 = current;
+prev1.next =current;
+prev1 =current;
 ```
 
 ---
@@ -1696,7 +1701,7 @@ You create:
 
 ```java
 Node dummy = new Node(0);
-dummy.next = head;
+dummy.next =head;
 ```
 
 Visual:
@@ -1738,11 +1743,11 @@ The important code:
 ```java
 Node nodeToMove = current.next;
 
-current.next = nodeToMove.next;
+current.next =nodeToMove.next;
 
-nodeToMove.next = prev.next;
+nodeToMove.next =prev.next;
 
-prev.next = nodeToMove;
+prev.next =nodeToMove;
 ```
 
 ### Complexity
@@ -1803,9 +1808,9 @@ dummy → [2] → [1] → [3] → [4]
 The important operations are:
 
 ```java
-prev.next = second;
-first.next = second.next;
-second.next = first;
+prev.next =second;
+first.next =second.next;
+second.next =first;
 ```
 
 Visual:
@@ -1824,8 +1829,8 @@ prev → second → first → next
 Then move forward:
 
 ```java
-prev = first;
-first = first.next;
+prev =first;
+first =first.next;
 ```
 
 ---
@@ -1859,7 +1864,7 @@ is not part of the actual answer
 At the end:
 
 ```java
-head = dummy.next;
+head =dummy.next;
 ```
 
 ---
@@ -1867,7 +1872,7 @@ head = dummy.next;
 # 35. Singly Linked List Complexity Cheat Sheet
 
 | Operation                  |  Time | Space |
-| -------------------------- | ----: | ----: |
+|----------------------------|------:|------:|
 | Create list                |  O(1) |  O(1) |
 | Get head                   |  O(1) |  O(1) |
 | Get tail                   |  O(1) |  O(1) |
@@ -1927,7 +1932,7 @@ Node:
 # 37. Important Difference
 
 | Operation          | Singly |        Doubly |
-| ------------------ | -----: | ------------: |
+|--------------------|-------:|--------------:|
 | Insert beginning   |   O(1) |          O(1) |
 | Insert end         |  O(1)* |          O(1) |
 | Remove beginning   |   O(1) |          O(1) |
@@ -1948,9 +1953,9 @@ Node:
 ```java
 Node current = head;
 
-while (current != null) {
-    // work
-    current = current.next;
+while(current !=null){
+// work
+current =current.next;
 }
 ```
 
@@ -1975,7 +1980,7 @@ previous → current → next
 To remove `current`:
 
 ```java
-previous.next = current.next;
+previous.next =current.next;
 ```
 
 Visual:
@@ -2053,10 +2058,10 @@ before ← current → after
 Code:
 
 ```java
-after = current.next;
-current.next = before;
-before = current;
-current = after;
+after =current.next;
+current.next =before;
+before =current;
+current =after;
 ```
 
 This is one of the most important linked-list patterns to memorize.
@@ -2091,14 +2096,14 @@ When changing linked-list pointers:
 For example, while reversing:
 
 ```java
-after = current.next;
-current.next = before;
+after =current.next;
+current.next =before;
 ```
 
 If you do:
 
 ```java
-current.next = before;
+current.next =before;
 ```
 
 first, without saving the original `next`, you may lose access to the remaining list.
@@ -2144,19 +2149,19 @@ is a valid insertion position.
 Current:
 
 ```java
-while (temp != null) {
-    temp.value = value;
+while(temp !=null){
+temp.value =value;
     return true;
-}
+            }
 ```
 
 Better:
 
 ```java
-if (temp != null) {
-    temp.value = value;
+if(temp !=null){
+temp.value =value;
     return true;
-}
+            }
 ```
 
 There is no reason for a loop because `get()` already returns exactly one node.
@@ -2201,8 +2206,12 @@ Then:
 
 ```java
 SinglyLinkedList list = new SinglyLinkedList();
-list.append(10);
-list.append(20);
+list.
+
+append(10);
+list.
+
+append(20);
 ```
 
 ---
@@ -2295,4 +2304,5 @@ fast
 dummy → HEAD → ...
 ```
 
-If you understand these pointer patterns, you understand the core of the **Singly Linked List** rather than just memorizing individual methods.
+If you understand these pointer patterns, you understand the core of the **Singly Linked List** rather than just
+memorizing individual methods.

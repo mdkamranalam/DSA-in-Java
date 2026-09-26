@@ -1,6 +1,7 @@
 ## Exercise 6: Partition List
 
 ### Code with explanation
+
 ```java
 public void partitionList(int x) {
     // Step 1: Check for an empty list.

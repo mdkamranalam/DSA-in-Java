@@ -1,6 +1,7 @@
 ## Exercise 02: Has Loop
 
 ### Explanation with code
+
 ```java
 public boolean hasLoop() {
     // Initialize slow pointer to the head of the linked list

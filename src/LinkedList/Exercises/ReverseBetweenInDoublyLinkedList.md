@@ -1,4 +1,5 @@
 # Excercise 4: Reverse Between in Doubly LinkedList
+
 ```java
 public void reverseBetween(int startIndex, int endIndex) {
     if (head == null || startIndex == endIndex) {
@@ -27,6 +28,7 @@ public void reverseBetween(int startIndex, int endIndex) {
         current.next = nodeToMove.next;
         if (nodeToMove.next != null) {
             nodeToMove.next.prev = current;
+            break;
         }
  
         // Move nodeToMove to the front of the sublist

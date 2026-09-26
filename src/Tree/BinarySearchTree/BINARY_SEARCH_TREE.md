@@ -1422,11 +1422,12 @@ Contains = O(n)
 # 26. Complexity Summary
 
 | Operation | Best | Average* | Worst |
-| --------- | ---: | -------: | ----: |
+|-----------|-----:|---------:|------:|
 | Insert    | O(1) | O(log n) |  O(n) |
 | Contains  | O(1) | O(log n) |  O(n) |
 
-`*` The `O(log n)` average case assumes a reasonably balanced/randomly shaped BST; an arbitrary unbalanced BST can still approach `O(n)`.
+`*` The `O(log n)` average case assumes a reasonably balanced/randomly shaped BST; an arbitrary unbalanced BST can still
+approach `O(n)`.
 
 ---
 
@@ -1974,7 +1975,7 @@ null child → INSERT HERE
 # 38. Difference Between Search and Insert
 
 | Situation            | Contains            | Insert              |
-| -------------------- | ------------------- | ------------------- |
+|----------------------|---------------------|---------------------|
 | Value equals current | Found → `true`      | Duplicate → `false` |
 | Value smaller        | Go left             | Go left             |
 | Value larger         | Go right            | Go right            |
@@ -2335,7 +2336,10 @@ If asked:
 
 A concise answer:
 
-> A Binary Search Tree is a binary tree that maintains an ordering property where values smaller than a node are stored in its left subtree and values larger than the node are stored in its right subtree. This property allows search and insertion to follow a single root-to-leaf path instead of examining every node. Their complexity is O(h), where h is the tree height, giving O(log n) for a reasonably balanced tree and O(n) in the worst case for a skewed tree.
+> A Binary Search Tree is a binary tree that maintains an ordering property where values smaller than a node are stored
+> in its left subtree and values larger than the node are stored in its right subtree. This property allows search and
+> insertion to follow a single root-to-leaf path instead of examining every node. Their complexity is O(h), where h is the
+> tree height, giving O(log n) for a reasonably balanced tree and O(n) in the worst case for a skewed tree.
 
 ---
 

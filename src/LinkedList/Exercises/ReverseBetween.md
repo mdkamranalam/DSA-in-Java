@@ -1,6 +1,7 @@
 ## Exercise 7: Reverse Between
 
 ### Code with explanation
+
 ```java
 public void reverseBetween(int startIndex, int endIndex) {
     // Check: If linked list is empty, nothing to reverse.

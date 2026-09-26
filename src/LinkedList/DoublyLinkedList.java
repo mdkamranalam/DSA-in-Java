@@ -8,23 +8,13 @@ public class DoublyLinkedList {
 
     // ==================== NODE ====================
 
-    class Node {
-        int value;
-        Node next;
-        Node prev;
-
-        Node(int value) {
-            this.value = value;
-        }
-    }
-
-    // ==================== CONSTRUCTOR ====================
-
     public DoublyLinkedList() {
         head = null;
         tail = null;
         length = 0;
     }
+
+    // ==================== CONSTRUCTOR ====================
 
     public DoublyLinkedList(int value) {
         Node newNode = new Node(value);
@@ -33,8 +23,6 @@ public class DoublyLinkedList {
         tail = newNode;
         length = 1;
     }
-
-    // ==================== PRINT ====================
 
     public void printList() {
         Node temp = head;
@@ -49,7 +37,7 @@ public class DoublyLinkedList {
         System.out.println("NULL");
     }
 
-    // ==================== GETTERS ====================
+    // ==================== PRINT ====================
 
     public void getHead() {
         if (head == null) {
@@ -59,6 +47,8 @@ public class DoublyLinkedList {
 
         System.out.println("Head: " + head.value);
     }
+
+    // ==================== GETTERS ====================
 
     public void getTail() {
         if (tail == null) {
@@ -72,8 +62,6 @@ public class DoublyLinkedList {
     public void getLength() {
         System.out.println("Length: " + length);
     }
-
-    // ==================== GET ====================
 
     // Get Node at a particular index
     public Node get(int index) {
@@ -104,7 +92,7 @@ public class DoublyLinkedList {
         return temp;
     }
 
-    // ==================== SET ====================
+    // ==================== GET ====================
 
     // Set value at a particular index
     public boolean set(int index, int value) {
@@ -119,7 +107,7 @@ public class DoublyLinkedList {
         return true;
     }
 
-    // ==================== PREPEND ====================
+    // ==================== SET ====================
 
     // Insert at beginning
     public void prepend(int value) {
@@ -141,7 +129,7 @@ public class DoublyLinkedList {
         length++;
     }
 
-    // ==================== INSERT ====================
+    // ==================== PREPEND ====================
 
     // Insert at a particular index
     public boolean insert(int index, int value) {
@@ -180,7 +168,7 @@ public class DoublyLinkedList {
         return true;
     }
 
-    // ==================== APPEND ====================
+    // ==================== INSERT ====================
 
     // Insert at end
     public void append(int value) {
@@ -202,7 +190,7 @@ public class DoublyLinkedList {
         length++;
     }
 
-    // ==================== REMOVE FIRST ====================
+    // ==================== APPEND ====================
 
     // Delete from beginning
     public Node removeFirst() {
@@ -231,7 +219,7 @@ public class DoublyLinkedList {
         return temp;
     }
 
-    // ==================== REMOVE ====================
+    // ==================== REMOVE FIRST ====================
 
     // Remove Node at a particular index
     public Node remove(int index) {
@@ -264,7 +252,7 @@ public class DoublyLinkedList {
         return temp;
     }
 
-    // ==================== REMOVE LAST ====================
+    // ==================== REMOVE ====================
 
     // Delete from end
     public Node removeLast() {
@@ -293,11 +281,7 @@ public class DoublyLinkedList {
         return temp;
     }
 
-    // ============================================================
-    //                         EXERCISES
-    // ============================================================
-
-    // ==================== EX 1: PALINDROME ====================
+    // ==================== REMOVE LAST ====================
 
     public boolean isPalindrome() {
 
@@ -321,7 +305,11 @@ public class DoublyLinkedList {
         return true;
     }
 
-    // ==================== EX 2: REVERSE ====================
+    // ============================================================
+    //                         EXERCISES
+    // ============================================================
+
+    // ==================== EX 1: PALINDROME ====================
 
     public void reverse() {
 
@@ -350,7 +338,7 @@ public class DoublyLinkedList {
         tail = temp;
     }
 
-    // ==================== EX 3: PARTITION ====================
+    // ==================== EX 2: REVERSE ====================
 
     public void partitionList(int x) {
 
@@ -424,7 +412,7 @@ public class DoublyLinkedList {
         }
     }
 
-    // ==================== EX 4: REVERSE BETWEEN ====================
+    // ==================== EX 3: PARTITION ====================
 
     public void reverseBetween(int startIndex, int endIndex) {
 
@@ -493,7 +481,7 @@ public class DoublyLinkedList {
         }
     }
 
-    // ==================== EX 5: SWAP PAIRS ====================
+    // ==================== EX 4: REVERSE BETWEEN ====================
 
     public void swapNodePairs() {
 
@@ -542,6 +530,18 @@ public class DoublyLinkedList {
 
         while (tail.next != null) {
             tail = tail.next;
+        }
+    }
+
+    // ==================== EX 5: SWAP PAIRS ====================
+
+    class Node {
+        int value;
+        Node next;
+        Node prev;
+
+        Node(int value) {
+            this.value = value;
         }
     }
 }

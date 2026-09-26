@@ -1,19 +1,7 @@
 package Tree.BinarySearchTree.RecursiveBST;
 
-import Tree.BinarySearchTree.BinarySearchTree;
-
 class RecursiveBST {
     Node root;
-
-    class Node {
-        int value;
-        Node left;
-        Node right;
-
-        Node(int value) {
-            this.value = value;
-        }
-    }
 
     // Insert
     private Node rInsert(Node root, int value) {
@@ -78,10 +66,20 @@ class RecursiveBST {
 
     // Minimum value
     public int minValue(Node root) {
-       while (root.left != null) {
-           root = root.left;
-       }
-       return root.value;
+        while (root.left != null) {
+            root = root.left;
+        }
+        return root.value;
+    }
+
+    class Node {
+        int value;
+        Node left;
+        Node right;
+
+        Node(int value) {
+            this.value = value;
+        }
     }
 }
 

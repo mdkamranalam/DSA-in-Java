@@ -1,6 +1,7 @@
 ## Exercise 04: Remove Duplicates
 
 ### 1. Solution Using a Set:
+
 ```java
 // Solution Using a Set - O(n)
 public void removeDuplicates() {
@@ -58,6 +59,7 @@ public void removeDuplicates() {
 ```
 
 ### 2. Solution without using a Set:
+
 ```java
 // Solution without using a Set - O(n^2)
 public void removeDuplicates() {

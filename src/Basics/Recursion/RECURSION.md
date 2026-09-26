@@ -1,6 +1,7 @@
 # Recursion in Java
 
-> A revision guide covering the recursion concept, call stack, base cases, recursive cases, Java implementations, visualizations, pseudocode, complexity, common patterns, exercises, LeetCode problems, and interview questions.
+> A revision guide covering the recursion concept, call stack, base cases, recursive cases, Java implementations,
+> visualizations, pseudocode, complexity, common patterns, exercises, LeetCode problems, and interview questions.
 
 ---
 
@@ -263,7 +264,7 @@ static void print(int n) {
 ### Comparison
 
 | Feature                       | Recursion                       | Iteration                     |
-| ----------------------------- | ------------------------------- | ----------------------------- |
+|-------------------------------|---------------------------------|-------------------------------|
 | Uses call stack               | Yes                             | Usually no                    |
 | Memory usage                  | Usually higher                  | Usually lower                 |
 | Code                          | Often concise                   | Often straightforward         |
@@ -1353,7 +1354,8 @@ n × factorial(n - 1)
 
 Therefore this is not tail recursive.
 
-> Important Java note: Java does not guarantee tail-call optimization, so tail recursion does not automatically eliminate stack usage.
+> Important Java note: Java does not guarantee tail-call optimization, so tail recursion does not automatically
+> eliminate stack usage.
 
 ---
 
@@ -1405,7 +1407,7 @@ void backtrack(state) {
         return;
     }
 
-    for (choice : choices) {
+    for (choices) {
 
         makeChoice(choice);
 
@@ -1707,7 +1709,7 @@ This concept will become very important when studying:
 You should eventually recognize these patterns.
 
 | Pattern            | Example              |
-| ------------------ | -------------------- |
+|--------------------|----------------------|
 | Linear recursion   | Factorial            |
 | Multiple recursion | Fibonacci            |
 | Array recursion    | Traverse array       |
@@ -2090,7 +2092,8 @@ Therefore tail-recursive Java methods can still consume stack space.
 
 Neither is universally better.
 
-Iteration often uses less memory, while recursion can provide a cleaner representation for naturally recursive problems such as trees and divide-and-conquer algorithms.
+Iteration often uses less memory, while recursion can provide a cleaner representation for naturally recursive problems
+such as trees and divide-and-conquer algorithms.
 
 ---
 
@@ -2158,7 +2161,8 @@ Memoization stores previously calculated results.
 
 ## Q15. Can every recursive problem be solved iteratively?
 
-In principle, many recursive algorithms can be converted to iterative versions by explicitly managing state, often with a stack.
+In principle, many recursive algorithms can be converted to iterative versions by explicitly managing state, often with
+a stack.
 
 However, recursion may provide a much simpler representation of the problem.
 
@@ -2334,7 +2338,8 @@ The key idea is not:
 
 Instead:
 
-> "If I trust the recursive function to correctly solve the smaller problem, how do I use that result to solve the current problem?"
+> "If I trust the recursive function to correctly solve the smaller problem, how do I use that result to solve the
+> current problem?"
 
 That shift in thinking is the foundation of solving recursion problems.
 
@@ -2453,4 +2458,5 @@ n × factorial(n - 1)
 
 That pattern is the foundation.
 
-Once you are comfortable with it, move from simple linear recursion → array/string recursion → tree recursion → divide-and-conquer → backtracking → dynamic programming.
+Once you are comfortable with it, move from simple linear recursion → array/string recursion → tree recursion →
+divide-and-conquer → backtracking → dynamic programming.

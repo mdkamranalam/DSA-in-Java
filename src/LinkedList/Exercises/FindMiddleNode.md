@@ -1,6 +1,7 @@
 ## Exercise 01: Find Middle Node in LinkedList
 
 ### Explanation with code
+
 ```java
 public Node findMiddleNode() {
     // Initialize slow pointer to the head of the linked list

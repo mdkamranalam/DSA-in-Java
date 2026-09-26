@@ -1,6 +1,7 @@
 ## Exercise 05: Binary to Decimal
 
 ### Code with explanation
+
 ```java
 // Define the binaryToDecimal method for the LinkedList class
 public int binaryToDecimal() {

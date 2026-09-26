@@ -3,16 +3,6 @@ package Tree.BinarySearchTree;
 public class BinarySearchTree {
     Node root;
 
-    class Node {
-        int value;
-        Node left;
-        Node right;
-
-        Node(int value) {
-            this.value = value;
-        }
-    }
-
     // Insert
     public boolean insert(int value) {
         Node newNode = new Node(value);
@@ -53,5 +43,15 @@ public class BinarySearchTree {
             }
         }
         return false;
+    }
+
+    class Node {
+        int value;
+        Node left;
+        Node right;
+
+        Node(int value) {
+            this.value = value;
+        }
     }
 }

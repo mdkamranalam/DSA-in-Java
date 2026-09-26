@@ -1,4 +1,5 @@
 # Exercise: 1 - Palindrome Checker in Doubly LinkedList
+
 ```java
 public boolean isPalindrome() { // Time Complexity -> O(n)
     // if the list has only 1 or 0 nodes, it's automatically a palindrome

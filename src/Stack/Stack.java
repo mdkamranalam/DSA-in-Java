@@ -4,16 +4,6 @@ public class Stack {
     private Node top;
     private int height;
 
-    // Node
-    class Node {
-        int value;
-        Node next;
-
-        Node(int value) {
-            this.value = value;
-        }
-    }
-
     // Constructor
     public Stack(int value) {
         Node newNode = new Node(value);
@@ -63,5 +53,15 @@ public class Stack {
         height--;
 
         return temp;
+    }
+
+    // Node
+    class Node {
+        int value;
+        Node next;
+
+        Node(int value) {
+            this.value = value;
+        }
     }
 }

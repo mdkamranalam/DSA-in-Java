@@ -1,10 +1,10 @@
 package Basics.Classes;
 
 public class Employee {
-    private String name;
     private final int id;
-    private boolean isLogin;
     private final String position;
+    private final String name;
+    private boolean isLogin;
 
     // Constructor
     public Employee(String name, int id, boolean isLogin, String position) {

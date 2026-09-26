@@ -5,16 +5,6 @@ public class Queue {
     private Node last;
     private int length;
 
-    // Node
-    class Node {
-        int value;
-        Node next;
-
-        Node(int value) {
-            this.value = value;
-        }
-    }
-
     // Constructor
     public Queue(int value) {
         Node newNode = new Node(value);
@@ -73,5 +63,15 @@ public class Queue {
         }
         length--;
         return temp;
+    }
+
+    // Node
+    class Node {
+        int value;
+        Node next;
+
+        Node(int value) {
+            this.value = value;
+        }
     }
 }

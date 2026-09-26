@@ -442,7 +442,7 @@ HEAD <-> 10 <-> 20 <-> 30 <-> NULL
 ### Complexity
 
 | Complexity | Value |
-| ---------- | ----: |
+|------------|------:|
 | Time       |  O(n) |
 | Space      |  O(1) |
 
@@ -1415,7 +1415,7 @@ O(1)
 # 42. Core Operations Complexity Table
 
 | Operation     | Time | Space |
-| ------------- | ---: | ----: |
+|---------------|-----:|------:|
 | Get head      | O(1) |  O(1) |
 | Get tail      | O(1) |  O(1) |
 | Get length    | O(1) |  O(1) |
@@ -2803,7 +2803,7 @@ Space: O(1)
 # 84. All Five Exercises — Complexity
 
 | Exercise        | Time | Space |
-| --------------- | ---: | ----: |
+|-----------------|-----:|------:|
 | Palindrome      | O(n) |  O(1) |
 | Reverse         | O(n) |  O(1) |
 | Partition       | O(n) |  O(1) |
@@ -2841,7 +2841,7 @@ Pointers connect them logically.
 # 86. Array vs Doubly Linked List
 
 | Operation        | Array | Doubly Linked List |
-| ---------------- | ----: | -----------------: |
+|------------------|------:|-------------------:|
 | Access by index  |  O(1) |               O(n) |
 | Search           |  O(n) |               O(n) |
 | Insert beginning |  O(n) |               O(1) |
@@ -3690,7 +3690,8 @@ The last five teach you how to apply those mechanics to **algorithmic problems**
 
 # 104. Final Takeaway
 
-A doubly linked list is not difficult because of its syntax. It becomes difficult when you lose track of the relationships between nodes.
+A doubly linked list is not difficult because of its syntax. It becomes difficult when you lose track of the
+relationships between nodes.
 
 Think in terms of:
 
@@ -3723,6 +3724,7 @@ For every operation:
       tail.next == null
 ```
 
-Once this mental model is solid, problems such as **reverse, palindrome, partition, reverse-between, and pair swapping** stop being separate tricks. They become different applications of the same fundamental skill:
+Once this mental model is solid, problems such as **reverse, palindrome, partition, reverse-between, and pair swapping**
+stop being separate tricks. They become different applications of the same fundamental skill:
 
 > **Manipulating bidirectional node references while preserving list invariants.**
