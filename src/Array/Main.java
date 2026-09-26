@@ -23,6 +23,14 @@ public class Main {
         System.out.print("Replace with adjacent multiplication: ");
         arrayEasy.replaceWithAdjacentMultiplication(arr); // Replace with adjacent multiplication
         printArray(arr);
+
+        System.out.print("Right Rotate array (Clockwise): ");
+        arrayEasy.rightRotate(arr, 2); // Clockwise rotate array
+        printArray(arr);
+
+        System.out.print("Left Rotate array (Anti-Clockwise): ");
+        arrayEasy.leftRotate(arr, 2); // Anti-Clockwise rotate array
+        printArray(arr);
     }
 
     // Print Array
