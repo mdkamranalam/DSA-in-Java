@@ -81,6 +81,36 @@ class RecursiveBST {
             this.value = value;
         }
     }
+
+    // In-order traversal
+    private void inOrder(Node root) {
+        if (root == null) return;
+
+        inOrder(root.left);
+        System.out.print(root.value + " ");
+        inOrder(root.right);
+    }
+
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    /* ========== Exercises ========== */
+    /*
+    *   Exercise - 1: Convert Sorted Array to Balanced BST
+    * */
+    private Node sortedArrayToBST(int[] nums, int left, int right) {
+        if (left > right) return null;
+        int mid = left + (right - left) / 2;
+        Node node = new Node(nums[mid]);
+        node.left = sortedArrayToBST(nums, left, mid - 1);
+        node.right = sortedArrayToBST(nums, mid + 1, right);
+        return node;
+    }
+
+    public void sortedArrayToBST(int[] nums) {
+        this.root = sortedArrayToBST(nums, 0, nums.length - 1);
+    }
 }
 
 public class Main {
@@ -108,6 +138,20 @@ public class Main {
 
         System.out.println(myBST.rContains(27));
         System.out.println(myBST.rContains(17));
+
+        System.out.println("\nExercise - 1: Convert Sorted Array to Balanced BST:");
+        int[] arr = {1, 2, 3, 4, 5};
+
+        myBST.sortedArrayToBST(arr);
+
+        System.out.println("Root: " + myBST.root.value);
+        System.out.println("Root->Left: " + myBST.root.left.value);
+        System.out.println("Root->Right: " + myBST.root.right.value);
+
+        System.out.print("In-order Traversal: ");
+        myBST.inOrder();
+
+        System.out.println();
         System.out.println("***========================================================***");
     }
 }
