@@ -128,6 +128,26 @@ class RecursiveBST {
         return results;
     }
 
+    // DFS PostOrder
+    public ArrayList<Integer> DFSPostOrder() {
+        ArrayList<Integer> results = new ArrayList<>();
+
+        class Traverse {
+            Traverse(Node currentNode) {
+                if (currentNode.left != null) {
+                    new Traverse(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    new Traverse(currentNode.right);
+                }
+                results.add(currentNode.value);
+            }
+        }
+
+        new Traverse(root);
+        return results;
+    }
+
     // In-order traversal
     private void inOrder(Node root) {
         if (root == null) return;
@@ -206,6 +226,9 @@ public class Main {
 
         System.out.print("DFS PreOrder: ");
         System.out.println(myBST.DFSPreOrder());
+
+        System.out.print("DFS PostOrder: ");
+        System.out.println(myBST.DFSPostOrder());
 
 //        myBST.deleteNode(27);
 
