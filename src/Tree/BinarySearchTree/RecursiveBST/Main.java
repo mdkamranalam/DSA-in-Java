@@ -98,6 +98,8 @@ class RecursiveBST {
     /* ========== Exercises ========== */
     /*
     *   Exercise - 1: Convert Sorted Array to Balanced BST
+    *       Time Complexity: O(n)
+    *       Space Complexity: O(n)
     * */
     private Node sortedArrayToBST(int[] nums, int left, int right) {
         if (left > right) return null;
@@ -110,6 +112,25 @@ class RecursiveBST {
 
     public void sortedArrayToBST(int[] nums) {
         this.root = sortedArrayToBST(nums, 0, nums.length - 1);
+    }
+
+    /*
+     *   Exercise - 2: Invert Binary Tree
+     *       Time Complexity: O(n)
+     *       Space Complexity: O(n)
+     * */
+    private Node invertTree(Node node) {
+        if (node == null) return null;
+
+        Node temp = node.left;
+        node.left = invertTree(node.right);
+        node.right = invertTree(temp);
+
+        return node;
+    }
+
+    public void invert() {
+        root = invertTree(root);
     }
 }
 
@@ -152,6 +173,18 @@ public class Main {
         myBST.inOrder();
 
         System.out.println();
+
+        System.out.println("\nExercise - 2: Invert Binary Tree:");
+        System.out.print("Before Inversion (In-order): ");
+        myBST.inOrder();
+
+        myBST.invert();
+
+        System.out.print("\nAfter Inversion (In-order): ");
+        myBST.inOrder();
+
+        System.out.println();
+
         System.out.println("***========================================================***");
     }
 }
