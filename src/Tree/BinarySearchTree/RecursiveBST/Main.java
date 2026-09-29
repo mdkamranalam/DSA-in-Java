@@ -1,5 +1,6 @@
 package Tree.BinarySearchTree.RecursiveBST;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -87,7 +88,7 @@ class RecursiveBST {
     }
 
     // Breadth First Search (BFS)
-    public ArrayList<Integer> bfs() {
+    public ArrayList<Integer> BFS() {
         Node currentNode = root;
         Queue<Node> queue = new LinkedList<>();
         ArrayList<Integer> results = new ArrayList<>();
@@ -104,6 +105,26 @@ class RecursiveBST {
                 queue.add(currentNode.right);
             }
         }
+        return results;
+    }
+
+    // DFS PreOrder
+    public ArrayList<Integer> DFSPreOrder() {
+        ArrayList<Integer> results = new ArrayList<>();
+
+        class Traverse {
+            Traverse(Node currentNode) {
+                results.add(currentNode.value);
+                if (currentNode.left != null) {
+                    new Traverse(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    new Traverse(currentNode.right);
+                }
+            }
+        }
+
+        new Traverse(root);
         return results;
     }
 
@@ -181,7 +202,10 @@ public class Main {
         System.out.println("Minimum Value at Right of the Root: " + myBST.minValue(myBST.root.right));
 
         System.out.print("Breadth First Search (BFS): ");
-        System.out.println(myBST.bfs());
+        System.out.println(myBST.BFS());
+
+        System.out.print("DFS PreOrder: ");
+        System.out.println(myBST.DFSPreOrder());
 
 //        myBST.deleteNode(27);
 
