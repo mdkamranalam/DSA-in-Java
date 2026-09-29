@@ -148,6 +148,26 @@ class RecursiveBST {
         return results;
     }
 
+    // DFS InOrder
+    public ArrayList<Integer> DFSInOrder() {
+        ArrayList<Integer> results = new ArrayList<>();
+
+        class Traverse {
+            Traverse(Node currentNode) {
+                if (currentNode.left != null) {
+                    new Traverse(currentNode.left);
+                }
+                results.add(currentNode.value);
+                if (currentNode.right != null) {
+                    new Traverse(currentNode.right);
+                }
+            }
+        }
+
+        new Traverse(root);
+        return results;
+    }
+
     // In-order traversal
     private void inOrder(Node root) {
         if (root == null) return;
@@ -230,35 +250,38 @@ public class Main {
         System.out.print("DFS PostOrder: ");
         System.out.println(myBST.DFSPostOrder());
 
-//        myBST.deleteNode(27);
+        System.out.print("DFS InOrder: ");
+        System.out.println(myBST.DFSInOrder());
 
-//        System.out.println(myBST.rContains(27));
-//        System.out.println(myBST.rContains(17));
+        myBST.deleteNode(27);
 
-//        System.out.println("\nExercise - 1: Convert Sorted Array to Balanced BST:");
-//        int[] arr = {1, 2, 3, 4, 5};
-//
-//        myBST.sortedArrayToBST(arr);
-//
-//        System.out.println("Root: " + myBST.root.value);
-//        System.out.println("Root->Left: " + myBST.root.left.value);
-//        System.out.println("Root->Right: " + myBST.root.right.value);
-//
-//        System.out.print("In-order Traversal: ");
-//        myBST.inOrder();
-//
-//        System.out.println();
-//
-//        System.out.println("\nExercise - 2: Invert Binary Tree:");
-//        System.out.print("Before Inversion (In-order): ");
-//        myBST.inOrder();
-//
-//        myBST.invert();
-//
-//        System.out.print("\nAfter Inversion (In-order): ");
-//        myBST.inOrder();
-//
-//        System.out.println();
+        System.out.println(myBST.rContains(27));
+        System.out.println(myBST.rContains(17));
+
+        System.out.println("\nExercise - 1: Convert Sorted Array to Balanced BST:");
+        int[] arr = {1, 2, 3, 4, 5};
+
+        myBST.sortedArrayToBST(arr);
+
+        System.out.println("Root: " + myBST.root.value);
+        System.out.println("Root->Left: " + myBST.root.left.value);
+        System.out.println("Root->Right: " + myBST.root.right.value);
+
+        System.out.print("In-order Traversal: ");
+        myBST.inOrder();
+
+        System.out.println();
+
+        System.out.println("\nExercise - 2: Invert Binary Tree:");
+        System.out.print("Before Inversion (In-order): ");
+        myBST.inOrder();
+
+        myBST.invert();
+
+        System.out.print("\nAfter Inversion (In-order): ");
+        myBST.inOrder();
+
+        System.out.println();
 
         System.out.println("***========================================================***");
     }
