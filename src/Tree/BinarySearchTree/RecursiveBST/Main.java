@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 class RecursiveBST {
     Node root;
@@ -233,6 +234,34 @@ class RecursiveBST {
         }
         return true;
     }
+
+    /*
+     *   Exercise - 4: Kth Smallest Node
+     *       Time Complexity: O(h + k), worst case O(n)
+     *       Space Complexity: O(h), Balanced BST: O(log n), Skewed BST: O(n)
+     * where:
+     *  n = number of nodes
+     *  k = kth smallest element
+     *  h = height of the BST
+     * */
+    public Integer kthSmallest(int k) {
+        Stack<Node> stack = new Stack<>();
+        Node node = this.root;
+
+        while (!stack.isEmpty() || node != null) {
+            while (node != null) {
+                stack.push(node);
+                node = node.left;
+            }
+            node = stack.pop();
+            k--;
+            if (k == 0) {
+                return node.value;
+            }
+            node = node.right;
+        }
+        return null;
+    }
 }
 
 public class Main {
@@ -276,6 +305,9 @@ public class Main {
         System.out.print("\nExercise - 3: Valid BST: ");
         System.out.println(myBST.isValidBST());
 
+        System.out.print("Exercise - 4: Kth Smallest Node: ");
+        System.out.println(myBST.kthSmallest(1));
+
         System.out.println("\nExercise - 1: Convert Sorted Array to Balanced BST:");
         int[] arr = {1, 2, 3, 4, 5};
 
@@ -300,8 +332,6 @@ public class Main {
         myBST.inOrder();
 
         System.out.println();
-
-
 
         System.out.println("***========================================================***");
     }
