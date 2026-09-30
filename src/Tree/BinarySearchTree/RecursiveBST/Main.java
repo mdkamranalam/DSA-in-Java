@@ -218,6 +218,21 @@ class RecursiveBST {
     public void invert() {
         root = invertTree(root);
     }
+
+    /*
+     *   Exercise - 3: Validate BST
+     *       Time Complexity: O(n)
+     *       Space Complexity: O(n)
+     * */
+    public boolean isValidBST() {
+        ArrayList<Integer> nodeValues = DFSInOrder();
+        for (int i = 1; i < nodeValues.size(); i++) {
+            if (nodeValues.get(i) <= nodeValues.get(i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 public class Main {
@@ -258,6 +273,9 @@ public class Main {
         System.out.println(myBST.rContains(27));
         System.out.println(myBST.rContains(17));
 
+        System.out.print("\nExercise - 3: Valid BST: ");
+        System.out.println(myBST.isValidBST());
+
         System.out.println("\nExercise - 1: Convert Sorted Array to Balanced BST:");
         int[] arr = {1, 2, 3, 4, 5};
 
@@ -282,6 +300,8 @@ public class Main {
         myBST.inOrder();
 
         System.out.println();
+
+
 
         System.out.println("***========================================================***");
     }
